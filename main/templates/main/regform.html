@@ -1,0 +1,45 @@
+
+<form method="post" id="form">
+  {% csrf_token %}
+  <div class="form-field">
+    <label class="property-name" for="name">Name</label>
+    <div class="field-input">
+      <input type="text" id="name" name="name" required>
+    </div>
+  </div>
+  <div class="form-field">
+    <label class="property-name" for="nickname">Nickname</label>
+    <div class="field-input">
+      <input type="text" id="nickname" name="nickname" required>
+    </div>
+  </div>
+  <div class="form-field gender">
+      <label class="property-name" for="gender-options">Gender</label>
+      
+      <div class="gender-options">
+        <input type="radio" name="gender" value="none" style="  visibility: hidden; width: 0px; margin:0px">
+        <label>
+          <input type="radio" name="gender" value="Attack Apache Helicopter">Attack Apache Helicopter
+          <!-- <div class="radio-control male"></div> -->
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Heavy Battle Tank">Heavy Battle Tank
+          <!-- <div class="radio-control female"></div> -->
+        </label>
+    </div>
+  </div>
+<div class="form-field">
+  <label class="property-name" for="email">E-mail</label>
+  <div class="field-input">
+    <input type="email" id="email" name="email" required>
+  </div>
+</div>
+<div class="form-field">
+<label class="property-name" for="password">Password</label>
+<div class="field-input">
+  <input type="password" id="password" name="password" required>
+</div>
+</div>
+
+<button type="submit">Зарегистрироваться</button> 
+</form> 

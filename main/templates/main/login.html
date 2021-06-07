@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>GDVault - login</title>
+	<link href="{% static 'styles/style.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'styles/style_login.css' %}" rel="stylesheet" type="text/css" />
+	<style>
+	</style>
+</head>
+
+<body>
+	<div class="form-wrap">
+		<div class="form-headder">
+			<h1>Login</h1>
+		</div>
+		<form method="post">
+		{% csrf_token %}
+			<div class="form-field">
+				<label class="property-name" for="name">Login</label>
+        <div class="field-input">
+          <input type="text" name="nickname" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="property-name" for="password">Password</label>
+        <div class="field-input">      
+          <input type="password" name="password" required>
+        </div>
+      </div>
+      <button type="submit">Login</button> 
+    </form> 
+	</div>
+{% include 'main/debug_tab.html' %}
+</body>

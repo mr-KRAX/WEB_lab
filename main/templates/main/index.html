@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>GDVault</title>
+	<link href="{% static 'styles/style.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'styles/style_headder.css' %}"" rel=" stylesheet" type="text/css" />
+	<link href="{% static 'styles/style_sidemenu.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'styles/style_article.css' %}" rel="stylesheet" type="text/css" />
+	<!-- <link href="{% static 'like.js' %}" rel="script" type="text/js" /> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="{% static 'like.js' %}	"></script>
+
+	<style>
+		hr {
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <script src="/script.js">	</script> -->
+	<div id="top"> </div>
+	<!-- <input type="checkbox" id="nav-toggle" hidden>    
+	<nav class="side-menu">
+		<label class="side-menu-toggle" for="nav-toggle" onclick>
+		</label>
+      <h2>Menu</h2>
+	    <ul>
+	      <li><a href="#1">Один</a>
+	      <li><a href="#2">Два</a>
+	      <li><a href="#3">Три</a>
+	      <li><a href="#4">Четыре</a>
+	      <li><a href="#5">Пять</a>
+	      <li><a href="#6">Шесть</a>
+	      <li><a href="#7">Семь</a> 
+	    </ul>
+  </nav> -->
+	<div id="headder" class="site-headder">
+		<div class="site-headder_item">
+			<label class="site-headder-menu svg-button" for="nav-toggle" onclick>
+				<!-- menu -->
+				<!-- <img src="images/icons/menu_512x512.png" /> -->
+				<svg class="menu-icon icon" version="1.1" viewBox="-5 0 134 124">
+					<path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z" />
+					<path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z" />
+					<path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z" />
+				</svg>
+			</label>
+		</div>
+		<div class="site-headder_spacer spacer">
+		</div>
+		<div class="site-headder_item">
+			<div class="site-headder-logo">
+				Game Dev Vault
+			</div>
+		</div>
+		<div class="site-headder_spacer spacer">
+		</div>
+		<div class="site-headder_item">
+			<label class="site-headder-user svg-button" for>
+				<!-- <a href="/pages/registration.html"> -->
+				<a href="registration">
+					<svg class="user-icon icon" version="1.1" viewBox="-5 -5 522 522">
+						<g>
+							<path d="M256,0c-74.439,0-135,60.561-135,135s60.561,135,135,135s135-60.561,135-135S330.439,0,256,0z" />
+							<path d="M423.966,358.195C387.006,320.667,338.009,300,286,300h-60c-52.008,0-101.006,20.667-137.966,58.195
+						C51.255,395.539,31,444.833,31,497c0,8.284,6.716,15,15,15h420c8.284,0,15-6.716,15-15
+						C481,444.833,460.745,395.539,423.966,358.195z" />
+						</g>
+					</svg>
+				</a>
+			</label>
+
+		</div>
+	</div>
+
+
+	<main role="main">
+		<div id="main_layout">
+			{% for art in articles %}
+			{% include 'main/article.html' with id=art.id title=art.title text=art.text author=art.author likes=art.likes %}
+			{% endfor %}
+		</div>
+		<div>
+			<a href="#top">Top</a><br>
+		</div>
+		
+	</main>
+	
+</body>
+{% include 'main/debug_tab.html' %}
+</html>

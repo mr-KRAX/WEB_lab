@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+.article {
+  border-radius: 8px;
+  background: rgb(199, 233, 255);
+  /* background: rgb(199, 0, 255); */
+
+  max-width: 600px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.733);
+}
+
+.article-headder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  color: black;
+  outline: none;
+  text-decoration: none;
+}
+
+.article-headder:hover {
+  font-weight: bold;
+}
+
+
+.article-author {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.article-author a {
+  color: black;
+  outline: none;
+  text-decoration: none;
+}
+
+.article-author a:hover {
+  color: rgb(48, 142, 204);
+  outline: none;
+  text-decoration: none;
+}
+
+
+.article-bottom {
+  overflow: hidden;
+  display: flex;
+  margin-top: 10px;
+}
+
+.article-brief {
+  margin-top: 8px; 
+  font-family: Lucida Console;
+  font-size: 18px;
+}
+
+.article-actions {
+  overflow: hidden;
+  display: flex;
+
+}
+
+.article-actions .icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px; 
+  fill: transparent; 
+  stroke: black;
+  stroke-width: 10%;
+}
+
+.article-actions .icon:hover{
+  fill: black;
+}
+
+.article-actions .icon:active {
+  fill:  black;
+  stroke-width: 0;
+}
+
+.article-like-counter {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2px;
+  text-align: center;
+}

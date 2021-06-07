@@ -1,0 +1,133 @@
+.form-wrap {
+  border-radius: 8px;
+  background: rgb(102, 194, 252);
+
+  max-width: 450px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+
+  margin: auto;
+  margin-top: 10%;
+
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.733);
+
+}
+
+
+.form-wrap > form {
+  background: rgb(199, 233, 255);
+  font-family: Lucida Console;
+  padding: 10px;
+  padding-top: 15px; 
+  border-radius: 8px;
+
+  margin: auto;
+}
+@font-face {
+	font-family: 'PressStart2P-Regular'; 
+  src: url('../fonts/PressStart2P-Regular.ttf'); 
+}
+.form-headder {
+  font-family: PressStart2P-Regular;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  padding: 15px;
+  /* font-size: 24px; */
+  font-size: 1em;
+}
+
+.form-field {
+  margin:5px;
+  margin-top: 10px;
+  display: flex;
+  /* float: left; */
+
+  white-space: nowrap;
+}
+
+
+.form-field > .property-name {
+  margin: 5px; 
+  margin-right: 10px; 
+  width: 100px;
+  line-height: 25px;
+  /* outline-width: 100px; */
+  /* vertical-align: baseline; */
+  display: block;
+}
+
+/* input[type="text"], input[type="email"] { */
+.field-input {
+  display: grid;
+}
+/* 
+.field-input > label {
+  
+  
+} */
+
+/* input[type="text"], input[type="email"] { */
+.form-field .field-input input {
+  border-width: 0;
+  outline: none;
+  margin: 0;
+  width: 270px;
+  padding: 5px 15px;
+  background: azure;
+}
+
+.form-field .field-input input.error {
+ border: 1px solid #ff0000;
+}
+.form-field label.error {
+  margin-top: 3px;
+  font-size: 10px;
+ color: #ff0000;
+ font-weight: normal;
+}
+
+
+/* input[type="text"]:focus, input[type="email"]:focus { */
+.form-field .field-input input:focus{
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+/* 
+input[type="text"]:valid, input[type="email"]:valid {
+  background: rgb(219, 255, 219);
+} */
+
+.gender-options {
+  display: grid;
+  margin: auto;
+  margin-left: 0;
+  /* width: 100%; */
+}
+
+.gender-options label {
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 200px;
+  margin: 25px auto 0;
+  background: rgb(102, 194, 252);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* @media (max-width: 600px) {
+  .form-wrap {margin: 20px auto; max-width: 550px; width:100%;}
+  .profile, form {float: none; width: 100%;}
+  h1 {margin-top: auto; padding-bottom: 50px;}
+  form {border-radius: 0 0 20px 20px;}
+} */

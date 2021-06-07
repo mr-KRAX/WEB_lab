@@ -1,0 +1,51 @@
+<div id="debug_tab">
+  <style>
+    #debug_tab {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      padding-left: 10px;
+      /* width: 100px; */
+      background: azure;
+      max-width: 200px;
+      word-wrap: true;
+    }
+
+    a {
+      /* float: right; */
+      font-weight: bold
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    function show() {
+      $.ajax({
+        url: "debug_info",
+        cache: false,
+        success: function (json) {
+          $("#debug_curr_user").html("User: " + json.user);
+          $("#debug_count").html("Count: " + json.count);
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      show();
+      setInterval('show()',1000);  
+    });  
+  </script>
+
+  <div>
+    --DEBUG--<br>
+    <hr>
+    <div id="debug_curr_user"></div>
+    <!-- <div id="debug_count"></div> -->
+    <div id="debug_msg">msg</div>
+
+    <hr>
+    <a href="login">login</a><br>
+    <a href="registration">registr</a><br>
+    <a href="/">index</a><br>
+  </div>
+</div>
